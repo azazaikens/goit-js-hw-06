@@ -14,17 +14,16 @@ const images = [
 ];
 
 const gallery = document.querySelector('.gallery');
-
+let buf = '';
 for (let obj of images) {
   // let img; 
   // img = document.createElement('img');
-
-  gallery.insertAdjacentHTML('beforeend', `<img url="${obj.url}" alt="${obj.alt}">`)
+  buf += `<img url="${obj.url}" alt="${obj.alt}">`
+  
 
   // img.setAttribute('url', obj.url);
   // img.setAttribute('atl', obj.alt);
 
   // gallery.appendChild(img)
 }
-
-console.log(gallery)
+gallery.insertAdjacentHTML('beforeend', buf)
