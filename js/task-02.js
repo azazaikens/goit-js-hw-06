@@ -9,15 +9,15 @@ const ingredients = [
 
 const listIngredirnts = document.querySelector("#ingredients");
 
-let elements
-let buf = '';
-ingredients.map(el => {
-  // elements = document.createElement("li");
-  // elements.textContent = el;
-  buf += `<li>${el}</li>`
-  // listIngredirnts.appendChild(elements);
-  // console.log(buf)
+// let buf = '';
+const items = ingredients.map(el => {
+  const elements = document.createElement("li");
+  elements.textContent = el;
+  // buf += `<li>${el}</li>`
+  return elements
 })
+listIngredirnts.append(...items);
 
-listIngredirnts.insertAdjacentHTML('beforeend', buf)
+
+// listIngredirnts.insertAdjacentHTML('beforeend', buf)
 
